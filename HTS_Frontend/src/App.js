@@ -1,13 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { store } from "./configure-store";
-import { Container } from "./actions/container";
+import Container from "./actions/container";
+import Dashboard from "./components/dashboard/dashboard-health-overview";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => (
-  <Provider store={store}>
-    <Container />
-  </Provider>
+  <Routes>
+    <Route>
+      <Route path="/" element={<Dashboard />} />
+    </Route>
+  </Routes>
 );
 
 export default App;
