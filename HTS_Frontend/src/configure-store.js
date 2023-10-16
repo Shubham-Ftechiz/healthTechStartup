@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import { countReducer } from "./counter/reducer";
+import { countReducer } from "./reducers/reducer";
 import createSagaMiddleware from "redux-saga";
 import "regenerator-runtime/runtime";
 
