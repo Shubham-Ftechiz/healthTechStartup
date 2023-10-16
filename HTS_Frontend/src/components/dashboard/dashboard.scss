@@ -2,4 +2,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    .options{
+        border: 1px solid;
+        height: 100vh;
+        width:100px
+    }
 }

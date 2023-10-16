@@ -4,8 +4,10 @@ import "./dashboard.scss";
 const Dashboard = () => {
     return (
 <div className="mainDashboard">
-        <div className="options">
-                <h5> Icon </h5>
+            <div className="options">
+                <div id="listIcons">
+                    <h5> Icon </h5>
+                </div>
         </div>
         <div className="healthOverview">
                 <h5> Health Overview</h5>
