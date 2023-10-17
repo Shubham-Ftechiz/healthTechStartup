@@ -20,6 +20,15 @@
             margin-top: 50px;
             padding-left: 0px;
             margin-bottom: -25px;
+
+            .selecticonSIcon{
+                cursor: pointer;
+                /* border: 1px solid #303030; */
+            }
+            .selecticonSIconNoBorder{
+                cursor: pointer;
+            }
+            
         }
         
         .subIcon{
@@ -32,10 +41,25 @@
 
             #iconCalender{
                 .selecticonCalender{
-                   
-                    padding: 12px 10px 6px 9px;
+
+                    padding: 12px 9px 6px 8px;
                     border: 1px solid #303030;
                     border-radius: 10px;
+                    background-color: #303030;
+                    cursor: pointer;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+
+                .selecticonCalenderNoBorder{
+
+                    padding: 12px 10px 6px 9px;
+                    cursor: pointer;
+                    /* border: 1px solid #303030; */
+                    //border-radius: 10px;
                     img{
                         background-color: white;
                         border: 1px solid white;
@@ -46,8 +70,23 @@
             #iconMessage{
                 .selecticonIconMessage{
                    
-                    padding: 12px 10px 6px 9px;
+                    padding: 12px 9px 6px 8px;
                     border: 1px solid #303030;
+                    background-color: #303030;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+
+                .selecticonIconMessageNoBorder{
+                   
+                    padding: 12px 10px 6px 9px;
+                    cursor: pointer;
+                    /* border: 1px solid #303030; */
                     border-radius: 10px;
                     img{
                         background-color: white;
@@ -59,8 +98,22 @@
             #iconClock{
                 .selecticonIconClock{
                    
-                    padding: 12px 10px 6px 9px;
+                    padding: 12px 9px 6px 8px;
                     border: 1px solid #303030;
+                    background-color: #303030;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+                .selecticonIconClockNoBorder{
+                   
+                    padding: 12px 10px 6px 9px;
+                    cursor: pointer;
+                    /* border: 1px solid #303030; */
                     border-radius: 10px;
                     img{
                         background-color: white;
@@ -72,8 +125,22 @@
             #iconSettings{
                 .selecticonIconSettings{
                    
-                    padding: 12px 10px 6px 9px;
+                    padding: 12px 9px 6px 8px;
                     border: 1px solid #303030;
+                    background-color: #303030;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+                .selecticonIconSettingsNoBorder{
+                   
+                    padding: 12px 10px 6px 9px;
+                    cursor: pointer;
+                    /* border: 1px solid #303030; */
                     border-radius: 10px;
                     img{
                         background-color: white;
@@ -84,9 +151,21 @@
             }
             #iconLogout{
                 .selecticonIconLogout{
-                   
-                    padding: 12px 10px 6px 9px;
+                    padding: 12px 9px 6px 8px;
                     border: 1px solid #303030;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    background-color: #303030;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+                .selecticonIconLogoutNoBorder{
+                    cursor: pointer;
+                    padding: 12px 10px 6px 9px;
+                    /* border: 1px solid #303030; */
                     border-radius: 10px;
                     img{
                         background-color: white;
