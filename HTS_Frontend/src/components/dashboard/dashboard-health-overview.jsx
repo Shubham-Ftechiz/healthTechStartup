@@ -1,14 +1,12 @@
 import React from "react";
 import "./dashboard.scss";
 
+import LeftPanel from "./left-panel";
+
 const Dashboard = () => {
     return (
 <div className="mainDashboard">
-            <div className="options">
-                <div id="listIcons">
-                    <h5> Icon </h5>
-                </div>
-        </div>
+        <LeftPanel/>
         <div className="healthOverview">
                 <h5> Health Overview</h5>
         </div>

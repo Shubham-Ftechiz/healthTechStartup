@@ -2,10 +2,99 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: calc(100vh - 1px);
 
     .options{
-        border: 1px solid;
-        height: 100vh;
-        width:100px
+        border: 1px solid #FFFFFF;
+        width: 10vh;
+        border-radius: 40px 10px 10px 40px;
+        background-color: #FFFFFF;
+        padding-left: 25px;
+        padding-top: 40px;
+
+        #iconStandard{
+            padding-left: 0px;
+        }
+
+        #iconSicon{
+            margin-top: 50px;
+            padding-left: 0px;
+            margin-bottom: -25px;
+        }
+        
+        .subIcon{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 4;
+            /* padding-left: 6px; */
+
+            #iconCalender{
+                .selecticonCalender{
+                   
+                    padding: 12px 10px 6px 9px;
+                    border: 1px solid #303030;
+                    border-radius: 10px;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            #iconMessage{
+                .selecticonIconMessage{
+                   
+                    padding: 12px 10px 6px 9px;
+                    border: 1px solid #303030;
+                    border-radius: 10px;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            #iconClock{
+                .selecticonIconClock{
+                   
+                    padding: 12px 10px 6px 9px;
+                    border: 1px solid #303030;
+                    border-radius: 10px;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            #iconSettings{
+                .selecticonIconSettings{
+                   
+                    padding: 12px 10px 6px 9px;
+                    border: 1px solid #303030;
+                    border-radius: 10px;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            #iconLogout{
+                .selecticonIconLogout{
+                   
+                    padding: 12px 10px 6px 9px;
+                    border: 1px solid #303030;
+                    border-radius: 10px;
+                    img{
+                        background-color: white;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
     }
 }
