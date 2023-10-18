@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: calc(100vh - 1px);
+    //height: calc(100vh - 1px);
 
     // Left panel
     .options{
@@ -324,10 +324,152 @@
         background-color: #303030;
         padding: 30px;
 
-        .mainHeading{
-            font-size: 22px;
-            font-weight: 400;
-            color: #FFFFFF;
+        .topBmiIndex {
+            display: flex;
+            justify-content: space-between;
+
+            .mainHeading{
+                font-size: 22px;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+        }
+
+        .heightWeightPicker{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+
+            .sidePickerMain{
+
+                height: 105px;
+                width: 200px;
+                border: 1px solid #4A4949;
+                border-radius: 5px;
+                background-color: #4A4949;
+                padding: 10px;
+
+                .sidePickerIcon{
+
+                    .sidePickerBmi{
+                        font-size: 16px;
+                        color: #FFFFFF;
+                    }
+
+                    .BMIHealth{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 20px;
+                        .BMIValue{
+                            color: #FFFFFF;
+                        }
+                        .healthyIcon{
+                            border: 1px solid #D6FFDD;
+                            border-radius: 5px;
+                            background-color: #D6FFDD;
+                            width: 40%;
+                            font-size: 12px;
+                            font-weight: 600;
+                            padding: 2px;
+                        }
+                    }
+                    .slider-picker{
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .slider-picker> div:nth-child(1) {
+                        width: 90%;
+                        border: 1px solid rgb(79, 9, 9);
+                        border-radius: 10px;
+                    }
+                    .slider-picker> div:nth-child(2) {
+                        visibility: hidden;
+                    }
+                    .slider-picker> div > div > div {
+                            border-radius: 10px;
+                    }
+
+                    .sliderMain{
+                        margin-top: 20px;
+                       
+                    }
+                }
+            }
+        }
+        
+        .bodyMeasurementMain{
+            display: flex;
+            
+            .bodyMeasurements{
+                color: #FFFFFF;
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                /* line-height: 35px; */
+
+                .subBodyMeasure {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1rem;
+                    align-items: flex-start;
+                }
+
+                #bodyMeasurementHeading{
+                    font-size: 16px;
+                }
+                #checkStatus{
+                    font-size: 12px;
+                    color: #CACACA;
+
+                }
+                #bodyShape{
+                    font-size: 12px;
+                    color: #FFFFFF;
+                    background-color: #4A4949;
+                    width: auto;
+                    border: 1px solid #4A4949;
+                    padding: 5px;
+                    border-radius: 10px;
+                    /* height: 15vh; */
+                    text-align: center;
+                }
+                .cardsManage{
+                    margin-top: 50%;
+                    .bodyParts{
+                        height: auto;
+                        width: 5vw;
+                        padding: 10px 10px 15px 10px;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                        background-color: #FFFFFF;
+                        margin-top: 10px;
+    
+                        .subBodyPart{
+                            font-size: 12px;
+                            color: #5F5F5F;
+                            font-weight: bold;
+                            text-align: center;
+                            padding-bottom: 1rem;
+                        }
+                        .partSizeIcon{
+                            display: flex;
+                            justify-content: space-evenly;
+                            margin-top: -10px;
+                            #partValue{
+                                font-size: 16px;
+                                color: #5F5F5F;
+                            }
+                            #partImg{
+    
+                            }
+                        }
+                    }
+                }
+            }
+            .bodyMeasurementsImg{
+                flex: 1;
+            }
         }
     }
 }
