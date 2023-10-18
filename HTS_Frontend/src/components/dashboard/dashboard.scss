@@ -4,12 +4,13 @@
     justify-content: space-between;
     height: calc(100vh - 1px);
 
+    // Left panel
     .options{
         border: 1px solid #FFFFFF;
         width: 10vh;
         border-radius: 40px 10px 10px 40px;
         background-color: #FFFFFF;
-        padding-left: 25px;
+        padding-left: 35px;
         padding-top: 40px;
 
         #iconStandard{
@@ -174,6 +175,159 @@
                     }
                 }
             }
+        }
+    }
+
+    // Health Overview Cards
+
+    .healthOverviewMain{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+
+        .subhealthOverview{
+            flex: 1;
+
+            .healthOverviewtop{
+                display: flex;
+                flex-direction: row;
+
+                .healthHeading{
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 35.14px;
+                }
+                .serachbellIcon{
+                    flex: 1;
+                }
+            }
+            .dateCards{
+                margin-top: 15px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20.08px;
+            }
+            .mainCards {
+                display: flex;
+                justify-content: space-between;
+
+                .cards{
+                    width: 213px;
+                    height: 262px;
+                    margin-top: 20px;
+                    background-color: #FFFFFF;
+                    border: 2px solid #FFFFFF;
+                    border-radius: 10px;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .topIcon{
+                        display: flex;
+                        //justify-content: space-between;
+                    }
+
+                    .iconBackground{
+                        width: 29px;
+                        padding: 10px;
+                        border: 1px solid transparent;
+                        border-radius: 12px;
+                    }
+                    .testName{
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 20px;
+                    }
+                    .measureName{
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .measureUnit{
+
+                    }
+                    .testResult{
+                        font-size: 12px;
+                        font-weight: 600;
+                        width: 40px;
+                        padding: 10px;
+                        border: 1px solid transparent;
+                        border-radius: 5px;
+                    }
+                }
+                
+            }
+        }
+
+        .activityGrowth{
+            flex: 1;
+            width: auto;
+            height: auto;
+            margin-top: 20px;
+            background-color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+
+            .activityGrowthTxt{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .datePicker{
+                float: right;
+            }
+            .graph-chart{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .appointments{
+            flex: 1;
+            margin-top: 20px;
+            width: auto;
+            height: 50px;
+            margin-top: 20px;
+            background-color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .upcomingAppointment{
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .appointmentDate{
+                font-size: 12px;
+                font-weight: 700;
+                border: 1px solid transparent;
+                background-color: #D0FBFF;
+                border-radius: 8px;
+                padding: 7px;
+            }
+            .appointmentName{
+                font-size:16px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    // BMI Calculator
+    .bmicalculatorMain{
+        flex: 1;
+        border: 1px solid #303030;
+        border-radius: 40px 10px 10px 40px;
+        background-color: #303030;
+        padding: 30px;
+
+        .mainHeading{
+            font-size: 22px;
+            font-weight: 400;
+            color: #FFFFFF;
         }
     }
 }

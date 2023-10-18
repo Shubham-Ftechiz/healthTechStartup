@@ -2,18 +2,19 @@ import React from "react";
 import "./dashboard.scss";
 
 import LeftPanel from "./left-panel";
+import HealthOverviewCards from "./health-overview-cards";
+
+import BMICalculator from "./bmi-calculator";
 
 const Dashboard = () => {
     return (
-<div className="mainDashboard">
-        <LeftPanel/>
-        <div className="healthOverview">
-                <h5> Health Overview</h5>
+        <div className="mainDashboard">
+                <LeftPanel/>
+
+                <HealthOverviewCards/>
+                
+                <BMICalculator/>
         </div>
-        <div className="bmicalculator">
-                <h5> BMI Calculator </h5>
-        </div>
-</div>
     )
 }
 
