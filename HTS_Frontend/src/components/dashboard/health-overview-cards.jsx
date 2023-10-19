@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { SearchOutlined,BellOutlined } from '@ant-design/icons';
 import BloodSugarDiagram from "../../images/bloodSugarDiagram.svg";
 import HeartRateDiagram from "../../images/heartRateDiagram.svg";
@@ -15,7 +15,12 @@ Legend} from "recharts";
 
 
 const HealthOverviewCards = () => {
+
+  const [healthMetrics, setHealthMetrics] = useState();
   
+  const healthmetricsAPI = 'http://localhost:8000/api/healthmetrics';
+
+
     const healthData = [{
         name:"Blood Sugar",
         measure:"80",
@@ -119,7 +124,24 @@ const dataBar = [
     Yoga: 4300,
     Meditation: 5400
   }
-];
+  ];
+  
+  useEffect(() => {
+    fetch(healthmetricsAPI)
+      .then(response => response.json())
+      .then((json) => {
+        console.log("healthMetrics55:", json, healthData)
+        
+        /* const result = json?.map((healthInfo,index) => {
+          healthInfo["diagram"] = healthData[index].diagram;
+          healthInfo["icon"] = healthData[index].diagram;
+          return healthInfo;
+        });
+        console.log("resultGetting:",result); */
+        setHealthMetrics(json);
+      })
+      .catch(error => console.error(error));
+  }, []);
 
 const onChangeDate = (value, dateString) => {
     console.log('Selected Time: ', value);
@@ -145,23 +167,26 @@ return(
                 August 12, 2021
             </div>
          <div className="mainCards">
-            {healthData?.map((data, index )=> 
-                <div className="cards">
-                    <div className="topIcon">
-                        <div className="iconBackground" style={{backgroundColor:data.colour}}>
-                            <img src={data.icon} alt="image" />
-                        </div>
-                        <div className="testName"> {data.name}</div> 
-                    </div>
-
-                    <div className="unitMain">
-                        <span className="measureName">{data.measure} </span>
-                        <span className="measureUnit">{data.measureUnit}</span>
-                    </div>
-                    <div className="testResult" style={{backgroundColor:data.colour}}>{data.result} </div>
-                    <img src={data.diagram} alt="image" />
+        {healthData?.map((data, index) => {
+          return(
+            <div className="cards">
+              <div className="topIcon">
+                <div className="iconBackground" style={{ backgroundColor: data.colour }}>
+                      <img src={data.icon} alt="image" />
                 </div>
-            )}
+                <div className="testName"> {data.name}</div>
+              </div>
+
+              <div className="unitMain">
+                <span className="measureName">{data.measure} </span>
+                <span className="measureUnit">{data.measureUnit}</span>
+              </div>
+              <div className="testResult" style={{ backgroundColor: data.colour }}>{data.result} </div>
+              <img src={data.diagram} alt="image" />
+            </div>
+          )
+          
+        })}
           </div>
             
         </div>
