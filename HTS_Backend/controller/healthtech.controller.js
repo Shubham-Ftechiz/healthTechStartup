@@ -6,8 +6,6 @@ exports.getHealthMetrics = async (req, res) => {
       measureUnit: "mg / dL",
       result: "Normal",
       colour: "#F8DEBD",
-      /* diagram: BloodSugarDiagram,
-      icon: BloodSugareIcon, */
     },
     {
       name: "Heart Rate",
@@ -15,8 +13,6 @@ exports.getHealthMetrics = async (req, res) => {
       measureUnit: "bpm",
       result: "Normal",
       colour: "#FBF0F3",
-      /* diagram: HeartRateDiagram,
-      icon: HeartRateIcon, */
     },
     {
       name: "Blood Pressure",
@@ -24,8 +20,6 @@ exports.getHealthMetrics = async (req, res) => {
       measureUnit: "/ 72 mmhg",
       result: "Normal",
       colour: "#D0FBFF",
-      /* diagram: BloodPresureDiagram,
-      icon: BloodPresureIcon, */
     },
   ];
   res.send(healthData);
@@ -115,17 +109,14 @@ exports.getbodyparts = async (req, res) => {
     {
       parts: "Chest (in)",
       value: "44.5",
-      /* icon: upArrow, */
     },
     {
       parts: "Waist (in)",
       value: "34",
-      /* icon: downArrow, */
     },
     {
       parts: "Hip (in)",
       value: "42.5",
-      /* icon: downArrow, */
     },
   ];
 
