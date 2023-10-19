@@ -7,8 +7,6 @@ import message from "../../images/message.svg";
 import clock from "../../images/clock.svg";
 import settings from "../../images/setting.svg";
 import logout from "../../images/logout.svg";
-import windowicon from "../../images/windowicon.png";
-
 
 
 const LeftPanel = () => {
@@ -92,13 +90,13 @@ const LeftPanel = () => {
                     <img src={standard} /* height={50} width={50} */ alt="image"/>
                 </div>
 
-                <div className="subIcon">
+                <div id="iconSicon" onClick={() => handleColourSIcon("sicon")}>
+                    <span className={colourIcon === true ? "selecticonSIcon" : "selecticonSIconNoBorder"}>
+                            <img src={sicon} height={40} width={40} alt="image" />
+                    </span>
+                </div>
 
-                    <div id="iconSicon" onClick={() => handleColourSIcon("sicon")}>
-                        <span className={colourIcon === true ? "selecticonSIcon" : "selecticonSIconNoBorder"}>
-                                <img src={windowicon} height={20} width={20} alt="image" />
-                        </span>
-                    </div>
+                <div className="subIcon">
 
                     <div id="iconCalender" onClick={() => handleColourCalender("calender")}>
                         <span className={colourCalender === true ? "selecticonCalender" : "selecticonCalenderNoBorder"}>

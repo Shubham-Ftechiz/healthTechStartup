@@ -15,8 +15,7 @@ Legend} from "recharts";
 
 
 const HealthOverviewCards = () => {
-
-    const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+  
     const healthData = [{
         name:"Blood Sugar",
         measure:"80",
@@ -105,6 +104,7 @@ const dataBar = [
   {
     name: "Oct",
     Aerobics: 3490,
+    Yoga: 2500,
     Meditation: 6700
   },
   {
@@ -121,14 +121,6 @@ const dataBar = [
   }
 ];
 
-const tickets = [{
-    status:"New",
-    
-},{
-    status:"In Progress"
-}]
-
-
 const onChangeDate = (value, dateString) => {
     console.log('Selected Time: ', value);
   };
@@ -136,34 +128,6 @@ const onChangeDate = (value, dateString) => {
   const onOk = (value) => {
     console.log('onOk: ', value);
   };
-
-  const yoga = Object.keys(
-    tickets.filter((ticket) => ticket.status === "New")
-  ).length;
-
-  const aerobics = Object.keys(
-    tickets.filter((ticket) => ticket.status === "In Progress")
-  ).length;
-
-
-  const meditation = Object.keys(
-    tickets.filter((ticket) => ticket.status === "In Progress")
-  ).length;
-
-  const data = [
-    {
-      name: "Aerobics",
-      uv: aerobics,
-    },
-    {
-      name: "Yoga",
-      uv: yoga,
-    },
-    {
-        name: "Meditation",
-        uv:meditation
-    }
-  ];
 
 return(
     <div className="healthOverviewMain">
