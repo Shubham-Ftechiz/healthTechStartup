@@ -8,7 +8,9 @@ import BloodSugareIcon from "../../images/bloodSugar.svg";
 import HeartRateIcon from "../../images/heartRate.svg";
 import BloodPresureIcon from "../../images/bloodPressure.svg";
 import { DatePicker, Space } from 'antd';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid ,
+Legend} from "recharts";
+
 
 
 
@@ -43,6 +45,81 @@ const HealthOverviewCards = () => {
         icon: BloodPresureIcon
     }
 ]
+
+
+const dataBar = [
+  {
+    name: "Jan",
+    Aerobics: 4000,
+    Yoga: 2400,
+    Meditation: 2500
+  },
+  {
+    name: "Feb",
+    Aerobics: 3000,
+    Yoga: 1398,
+    Meditation: 1000
+  },
+  {
+    name: "Mar",
+    Aerobics: 2000,
+    Yoga: 9800,
+    Meditation: 2600
+  },
+  {
+    name: "Apr",
+    Aerobics: 2780,
+    Yoga: 3908,
+    Meditation: 7800
+  },
+  {
+    name: "May",
+    Aerobics: 1890,
+    Yoga: 4800,
+    Meditation: 6700
+  },
+  {
+    name: "Jun",
+    Aerobics: 2390,
+    Yoga: 3800,
+    Meditation: 7500
+  },
+  {
+    name: "Jul",
+    Aerobics: 3490,
+    Yoga: 4300,
+    Meditation: 8900
+  },
+  {
+    name: "Aug",
+    Aerobics: 3490,
+    Yoga: 4300,
+    Meditation:4500
+  },
+  {
+    name: "Sep",
+    Aerobics: 3490,
+    Yoga: 4300,
+    Meditation: 8788
+  },
+  {
+    name: "Oct",
+    Aerobics: 3490,
+    Meditation: 6700
+  },
+  {
+    name: "Nov",
+    Aerobics: 3490,
+    Yoga: 4300,
+    Meditation: 7500
+  },
+  {
+    name: "Dec",
+    Aerobics: 3490,
+    Yoga: 4300,
+    Meditation: 5400
+  }
+];
 
 const tickets = [{
     status:"New",
@@ -87,23 +164,6 @@ const onChangeDate = (value, dateString) => {
         uv:meditation
     }
   ];
-
-  const getPath = (x, y, width, height) => {
-    return `M${x},${y + height}C${x + width / 3},${y + height} ${
-      x + width / 2
-    },${y + height / 3}
-    ${x + width / 2}, ${y}
-    C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${
-      x + width
-    }, ${y + height}
-    Z`;
-  };
-
-  const TriangleBar = (props) => {
-    const { fill, x, y, width, height } = props;
-
-    return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
-  };
 
 return(
     <div className="healthOverviewMain">
@@ -150,32 +210,25 @@ return(
             </div>
             <div className="graph-chart">
                       <BarChart
-                        width={500}
-                        height={300}
-                        data={data}
+                        width={683}
+                        height={270}
+                        data={dataBar}
                         margin={{
-                          top: 20,
+                          top: 5,
                           right: 30,
                           left: 20,
-                          bottom: 5,
+                          bottom: 5
                         }}
                       >
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
                         <YAxis />
-                        <Bar
-                          dataKey="uv"
-                          fill="#8884d8"
-                          shape={<TriangleBar />}
-                          label={{ position: "top" }}
-                        >
-                          {data.map((entry, index) => (
-                            <Cell
-                              key={`cell-${index}`}
-                              fill={colors[index % 20]}
-                            />
-                          ))}
-                        </Bar>
+                        {/* <Tooltip /> */}
+                        <Legend />
+                        <Bar dataKey="Aerobics" fill="#CA6B6E" />
+                        <Bar dataKey="Yoga" fill="#478F96" />
+                        <Bar dataKey="Meditation" fill="#D08726" />
+                        
                       </BarChart>
             </div>
         </div>
