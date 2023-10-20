@@ -47,7 +47,7 @@ const BMICalculator = () => {
                     BMI Calculator
                 </div>
                 <div className="dataPickerWeek">
-                    <DatePicker onChange={onChange} picker="week" />
+                    <DatePicker onChange={onChange} picker="week" placement={"topLeft"}/>
                 </div>
             </div>
 
