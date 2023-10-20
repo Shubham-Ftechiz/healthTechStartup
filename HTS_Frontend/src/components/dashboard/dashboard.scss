@@ -16,7 +16,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        height:100vh;
        
 
         #iconStandard{
@@ -552,4 +551,31 @@
     //     margin: 2rem 2.5rem 0 2rem;
      
     // }
+}
+
+@media (max-width: 425px) {
+    .mainDashboard .bmicalculatorMain {
+        flex: 1 1;
+        border: 1px solid #303030;
+        border-radius: 40px 40px 40px 40px;
+        background-color: #303030;
+        padding: 40px 175px 40px 175px !important;
+        height: auto;
+    }
+
+    .subBodyPart{
+        font-size: 10px !important;
+    }
+    .mainDashboard .bmicalculatorMain .bodyMeasurementMain .bodyMeasurements .cardsManage .bodyParts .partSizeIcon #partValue {
+        font-size: 12px;
+        color: #5F5F5F;
+    }
+
+    div#partImg > img {
+        width: 12px !important;
+    }
+
+    .mainDashboard .bmicalculatorMain .bodyMeasurementMain .bodyMeasurements .cardsManage .bodyParts {
+        padding: 20px 25px 25px 25px;
+    }
 }
