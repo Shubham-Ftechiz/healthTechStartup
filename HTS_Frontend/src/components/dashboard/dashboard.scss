@@ -2,16 +2,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     //height: calc(100vh - 1px);
 
     // Left panel
     .options{
         border: 1px solid #FFFFFF;
-        width: 10vh;
+        width: auto;
         border-radius: 40px 10px 10px 40px;
         background-color: #FFFFFF;
-        padding-left: 35px;
-        padding-top: 40px;
+        padding: 0 2rem;
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height:100vh;
+       
 
         #iconStandard{
             padding-left: 0px;
@@ -19,13 +25,22 @@
 
         #iconSicon{
             margin-top: 50px;
-            padding-left: 0px;
-            margin-bottom: -25px;
 
             .selecticonSIcon{
-                cursor: pointer;
-                /* border: 1px solid #303030; */
-            }
+
+                    padding: 14px 9px 6px 9px;
+                    border-radius: 4px;
+                    border: 1px solid #303030;
+                    background-color: #303030;
+                    cursor: pointer;
+                    cursor: pointer;
+                    img{
+                        background-color: white;
+                        // border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+
             .selecticonSIconNoBorder{
                 cursor: pointer;
             }
@@ -33,20 +48,22 @@
         }
         
         .subIcon{
-            margin-top: 40px;
+            // margin-top: 40px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            line-height: 4;
+            align-items: center;
+            gap:3rem;
             /* padding-left: 6px; */
 
             #iconCalender{
                 .selecticonCalender{
 
-                    padding: 12px 9px 6px 8px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
-                    border-radius: 10px;
                     background-color: #303030;
+                    cursor: pointer;
                     cursor: pointer;
                     img{
                         background-color: white;
@@ -56,8 +73,8 @@
                 }
 
                 .selecticonCalenderNoBorder{
-
-                    padding: 12px 10px 6px 9px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
                     /* border: 1px solid #303030; */
                     //border-radius: 10px;
@@ -70,11 +87,10 @@
             }
             #iconMessage{
                 .selecticonIconMessage{
-                   
-                    padding: 12px 9px 6px 8px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
-                    border-radius: 10px;
                     cursor: pointer;
                     img{
                         background-color: white;
@@ -85,10 +101,10 @@
 
                 .selecticonIconMessageNoBorder{
                    
-                    padding: 12px 10px 6px 9px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
                     img{
                         background-color: white;
                         border: 1px solid white;
@@ -99,10 +115,10 @@
             #iconClock{
                 .selecticonIconClock{
                    
-                    padding: 12px 9px 6px 8px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
-                    border-radius: 10px;
                     cursor: pointer;
                     img{
                         background-color: white;
@@ -111,11 +127,10 @@
                     }
                 }
                 .selecticonIconClockNoBorder{
-                   
-                    padding: 12px 10px 6px 9px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
                     img{
                         background-color: white;
                         border: 1px solid white;
@@ -126,10 +141,10 @@
             #iconSettings{
                 .selecticonIconSettings{
                    
-                    padding: 12px 9px 6px 8px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
-                    border-radius: 10px;
                     cursor: pointer;
                     img{
                         background-color: white;
@@ -138,11 +153,10 @@
                     }
                 }
                 .selecticonIconSettingsNoBorder{
-                   
-                    padding: 12px 10px 6px 9px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
                     img{
                         background-color: white;
                         border: 1px solid white;
@@ -152,9 +166,9 @@
             }
             #iconLogout{
                 .selecticonIconLogout{
-                    padding: 12px 9px 6px 8px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
-                    border-radius: 10px;
                     cursor: pointer;
                     background-color: #303030;
                     img{
@@ -165,9 +179,9 @@
                 }
                 .selecticonIconLogoutNoBorder{
                     cursor: pointer;
-                    padding: 12px 10px 6px 9px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
                     img{
                         background-color: white;
                         border: 1px solid white;
@@ -185,6 +199,8 @@
         display: flex;
         flex-direction: column;
         padding: 30px;
+        margin-right: 1rem;
+      
 
         .subhealthOverview{
             flex: 1;
@@ -475,5 +491,65 @@
                 flex: 1;
             }
         }
+    }
+} 
+.hamburgerIcon {
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.hamburger-bar {
+    width: 30px;
+    height: 3px;
+    background-color: grey;
+    margin: 4px 0;
+    color: #ffa41f;
+    display: none;
+}
+
+.subIcon {
+    display: none;
+}
+
+/* Display subIcon when showMenu is true */
+.subIcon.show-menu {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 1345px) {
+    .bmicalculatorMain{
+        margin: 2rem 2.5rem 0 2rem;
+     }
+}
+
+/* Hide subIcon for screens with max-width: 996px */
+@media (max-width: 996px) {
+    .hamburger-bar {
+        display: block;
+    }
+    .subIcon.show-menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainDashboard{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .options{
+       
+        height:auto;
+        z-index:2;
+    }
+    .healthOverviewMain{
+        position: absolute;
+        top:0;
+        left:3rem;
+        margin-right: 2rem;
+        z-index:1;
+    }
+    
+    .bmicalculatorMain{
+        margin: 2rem 2.5rem 0 2rem;
+     
     }
 }
