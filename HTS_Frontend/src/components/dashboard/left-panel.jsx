@@ -7,9 +7,11 @@ import message from "../../images/message.svg";
 import clock from "../../images/clock.svg";
 import settings from "../../images/setting.svg";
 import logout from "../../images/logout.svg";
+import windowicon from "../../images/windowicon.png";
+
 
 const LeftPanel = () => {
-  const [colourIcon, setColourSicon] = useState(false);
+  const [colourIcon, setColourSicon] = useState(true);
 
   const [colourCalender, setColourCalender] = useState(false);
 
@@ -119,7 +121,7 @@ const LeftPanel = () => {
                     : "selecticonSIconNoBorder"
                 }
               >
-                <img src={sicon} height={40} width={40} alt="image" />
+                <img src={windowicon} height={20} width={20} alt="image" />
               </span>
             </div>
 

@@ -531,25 +531,25 @@
         display: flex;
         flex-direction: column;
     }
-    .mainDashboard{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .options{
+    // .mainDashboard{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    // }
+    // .options{
        
-        height:auto;
-        z-index:2;
-    }
-    .healthOverviewMain{
-        position: absolute;
-        top:0;
-        left:3rem;
-        margin-right: 2rem;
-        z-index:1;
-    }
+    //     height:auto;
+    //     z-index:2;
+    // }
+    // .healthOverviewMain{
+    //     position: absolute;
+    //     top:0;
+    //     left:3rem;
+    //     margin-right: 2rem;
+    //     z-index:1;
+    // }
     
-    .bmicalculatorMain{
-        margin: 2rem 2.5rem 0 2rem;
+    // .bmicalculatorMain{
+    //     margin: 2rem 2.5rem 0 2rem;
      
-    }
+    // }
 }
