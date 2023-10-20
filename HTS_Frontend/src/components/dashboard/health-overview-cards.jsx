@@ -17,128 +17,29 @@ Legend} from "recharts";
 const HealthOverviewCards = () => {
 
   const [healthMetrics, setHealthMetrics] = useState();
+  const [activityDataBar, setDataBar] = useState();
+
   
   const healthmetricsAPI = 'http://localhost:8000/api/healthmetrics';
+  const activitygrowthAPI = 'http://localhost:8000/api/activitygrowth';
 
-
-    const healthData = [{
-        name:"Blood Sugar",
-        measure:"80",
-        measureUnit: "mg / dL",
-        result:"Normal",
-        colour:"#F8DEBD",
-        diagram: BloodSugarDiagram,
-        icon: BloodSugareIcon
-    },
-    {
-        name:"Heart Rate",
-        measure:"98",
-        measureUnit: "bpm",
-        result:"Normal",
-        colour:"#FBF0F3",
-        diagram: HeartRateDiagram,
-        icon: HeartRateIcon
-    },
-    {
-        name:"Blood Pressure",
-        measure:"102 ",
-        measureUnit:"/ 72 mmhg",
-        result:"Normal",
-        colour:"#D0FBFF",
-        diagram: BloodPresureDiagram,
-        icon: BloodPresureIcon
-    }
-]
-
-
-const dataBar = [
-  {
-    name: "Jan",
-    Aerobics: 4000,
-    Yoga: 2400,
-    Meditation: 2500
-  },
-  {
-    name: "Feb",
-    Aerobics: 3000,
-    Yoga: 1398,
-    Meditation: 1000
-  },
-  {
-    name: "Mar",
-    Aerobics: 2000,
-    Yoga: 9800,
-    Meditation: 2600
-  },
-  {
-    name: "Apr",
-    Aerobics: 2780,
-    Yoga: 3908,
-    Meditation: 7800
-  },
-  {
-    name: "May",
-    Aerobics: 1890,
-    Yoga: 4800,
-    Meditation: 6700
-  },
-  {
-    name: "Jun",
-    Aerobics: 2390,
-    Yoga: 3800,
-    Meditation: 7500
-  },
-  {
-    name: "Jul",
-    Aerobics: 3490,
-    Yoga: 4300,
-    Meditation: 8900
-  },
-  {
-    name: "Aug",
-    Aerobics: 3490,
-    Yoga: 4300,
-    Meditation:4500
-  },
-  {
-    name: "Sep",
-    Aerobics: 3490,
-    Yoga: 4300,
-    Meditation: 8788
-  },
-  {
-    name: "Oct",
-    Aerobics: 3490,
-    Yoga: 2500,
-    Meditation: 6700
-  },
-  {
-    name: "Nov",
-    Aerobics: 3490,
-    Yoga: 4300,
-    Meditation: 7500
-  },
-  {
-    name: "Dec",
-    Aerobics: 3490,
-    Yoga: 4300,
-    Meditation: 5400
-  }
-  ];
+const imgArr = [BloodSugarDiagram, HeartRateDiagram, BloodPresureDiagram]
+const iconArr = [BloodSugareIcon, HeartRateIcon, BloodPresureIcon]
   
   useEffect(() => {
+    // Health Cards
     fetch(healthmetricsAPI)
       .then(response => response.json())
       .then((json) => {
-        console.log("healthMetrics55:", json, healthData)
-        
-        /* const result = json?.map((healthInfo,index) => {
-          healthInfo["diagram"] = healthData[index].diagram;
-          healthInfo["icon"] = healthData[index].diagram;
-          return healthInfo;
-        });
-        console.log("resultGetting:",result); */
         setHealthMetrics(json);
+      })
+      .catch(error => console.error(error));
+
+      // Graph
+      fetch(activitygrowthAPI)
+      .then(response => response.json())
+      .then((json) => {
+        setDataBar(json);
       })
       .catch(error => console.error(error));
   }, []);
@@ -167,12 +68,12 @@ return(
                 August 12, 2021
             </div>
          <div className="mainCards">
-        {healthData?.map((data, index) => {
+        {healthMetrics?.map((data, index) => {
           return(
             <div className="cards">
               <div className="topIcon">
                 <div className="iconBackground" style={{ backgroundColor: data.colour }}>
-                      <img src={data.icon} alt="image" />
+                      <img src={iconArr[index]} alt="image" />
                 </div>
                 <div className="testName"> {data.name}</div>
               </div>
@@ -182,7 +83,7 @@ return(
                 <span className="measureUnit">{data.measureUnit}</span>
               </div>
               <div className="testResult" style={{ backgroundColor: data.colour }}>{data.result} </div>
-              <img src={data.diagram} alt="image" />
+              <img src={imgArr[index]} alt="image" />
             </div>
           )
           
@@ -201,7 +102,7 @@ return(
                       <BarChart
                         width={683}
                         height={270}
-                        data={dataBar}
+                        data={activityDataBar}
                         margin={{
                           top: 5,
                           right: 30,

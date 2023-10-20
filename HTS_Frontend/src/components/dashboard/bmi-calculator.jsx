@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DatePicker } from 'antd';
 
 import HeightBMI from '../../images/heightBMI.png';
@@ -13,9 +13,13 @@ import downArrow from "../../images/downArrow.svg";
 
 const BMICalculator = () => {
 
+    const bodyParts = 'http://localhost:8000/api/bodyparts';
+    
     const [colourChange, setColourChange] = useState({
         background: '#fff'
     });
+    const [bodyPartsInfo, setBodyParts] = useState();
+
     const onChange = (date, dateString) => {
         console.log(date, dateString);
     }
@@ -24,21 +28,17 @@ const BMICalculator = () => {
         setColourChange({ background: color.hex });
     };
     
-    const bodyParts = [{
-        parts: "Chest (in)",
-        value: "44.5",
-        icon: upArrow
-    },
-    {
-        parts: "Waist (in)",
-        value: "34",
-        icon: downArrow
-        },
-        {
-        parts: "Hip (in)",
-        value: "42.5",
-        icon: downArrow
-    }]
+    const BmiIcon = [upArrow, downArrow, downArrow];
+
+    useEffect(() => {
+        // Body Parts
+        fetch(bodyParts)
+        .then(response => response.json())
+        .then((json) => {
+            setBodyParts(json);
+        })
+        .catch(error => console.error(error));
+    },[])
     
     return ( 
         <div className="bmicalculatorMain">
@@ -106,7 +106,7 @@ const BMICalculator = () => {
                 {/* Cards of body parts */}
 
                 <div className="cardsManage">
-                    {bodyParts?.map((partsBody) =>
+                    {bodyPartsInfo?.map((partsBody, index) =>
                         <div className="bodyParts">
                             <div className="subBodyPart">
                                 {partsBody.parts}
@@ -116,12 +116,12 @@ const BMICalculator = () => {
                                     {partsBody.value}
                                 </div>
                                 <div id="partImg">
-                                    <img src={partsBody.icon} alt="image"/>
+                                    <img src={BmiIcon[index]} alt="image"/>
                                 </div>
                             </div>
                         </div>
                     )}
-                   </div> 
+                </div> 
                 </div>
 
                 <div className="bodyMeasurementsImg">
