@@ -10,28 +10,30 @@ import BloodPresureIcon from "../../images/bloodPressure.svg";
 import { DatePicker, Space } from 'antd';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid ,
 Legend} from "recharts";
-
-
-
+import { useSelector, useDispatch } from "react-redux";
+import { getHealthMetrics, getBarData } from "../../actions/index";
 
 const HealthOverviewCards = () => {
-
-  const [healthMetrics, setHealthMetrics] = useState();
-  const [activityDataBar, setDataBar] = useState();
-
   
   const healthmetricsAPI = 'http://localhost:8000/api/healthmetrics';
   const activitygrowthAPI = 'http://localhost:8000/api/activitygrowth';
 
-const imgArr = [BloodSugarDiagram, HeartRateDiagram, BloodPresureDiagram]
-const iconArr = [BloodSugareIcon, HeartRateIcon, BloodPresureIcon]
+  const dispatch = useDispatch();
+
+  const imgArr = [BloodSugarDiagram, HeartRateDiagram, BloodPresureDiagram]
+  const iconArr = [BloodSugareIcon, HeartRateIcon, BloodPresureIcon]
   
+  const healthMetricsState = useSelector((state) => state.changeHealthMetrics);
+  const barGraphData = useSelector((state) => state.changeBarData);
+
+  console.log("barGraphData:",barGraphData)
+
   useEffect(() => {
     // Health Cards
     fetch(healthmetricsAPI)
       .then(response => response.json())
       .then((json) => {
-        setHealthMetrics(json);
+        dispatch(getHealthMetrics(json));
       })
       .catch(error => console.error(error));
 
@@ -39,7 +41,7 @@ const iconArr = [BloodSugareIcon, HeartRateIcon, BloodPresureIcon]
       fetch(activitygrowthAPI)
       .then(response => response.json())
       .then((json) => {
-        setDataBar(json);
+        dispatch(getBarData(json));
       })
       .catch(error => console.error(error));
   }, []);
@@ -68,7 +70,7 @@ return(
                 August 12, 2021
             </div>
          <div className="mainCards">
-        {healthMetrics?.map((data, index) => {
+        {healthMetricsState?.map((data, index) => {
           return(
             <div className="cards">
               <div className="topIcon">
@@ -102,7 +104,7 @@ return(
                       <BarChart
                         width={683}
                         height={270}
-                        data={activityDataBar}
+                        data={barGraphData ?? barGraphData}
                         margin={{
                           top: 5,
                           right: 30,

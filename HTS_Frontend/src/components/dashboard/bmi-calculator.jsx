@@ -10,15 +10,20 @@ import ManImg from "../../images/manDiagram.png";
 import upArrow from "../../images/upArrow.svg";
 import downArrow from "../../images/downArrow.svg";
 
+import { useSelector, useDispatch } from "react-redux";
+import { getBodyParts } from "../../actions/index";
+
 
 const BMICalculator = () => {
-
+    
     const bodyParts = 'http://localhost:8000/api/bodyparts';
+    
+    const bodyPartsDetails = useSelector((state) => state.changeBodyParts)
+    const dispatch = useDispatch();
     
     const [colourChange, setColourChange] = useState({
         background: '#fff'
     });
-    const [bodyPartsInfo, setBodyParts] = useState();
 
     const onChange = (date, dateString) => {
         console.log(date, dateString);
@@ -35,7 +40,7 @@ const BMICalculator = () => {
         fetch(bodyParts)
         .then(response => response.json())
         .then((json) => {
-            setBodyParts(json);
+            dispatch(getBodyParts(json));
         })
         .catch(error => console.error(error));
     },[])
@@ -106,7 +111,7 @@ const BMICalculator = () => {
                 {/* Cards of body parts */}
 
                 <div className="cardsManage">
-                    {bodyPartsInfo?.map((partsBody, index) =>
+                    {bodyPartsDetails?.map((partsBody, index) =>
                         <div className="bodyParts">
                             <div className="subBodyPart">
                                 {partsBody.parts}

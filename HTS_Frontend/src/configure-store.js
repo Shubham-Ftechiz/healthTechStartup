@@ -1,14 +1,8 @@
+import thunk from "redux-thunk";
 import { createStore, applyMiddleware } from "redux";
-import { countReducer } from "./reducers/reducer";
-import createSagaMiddleware from "redux-saga";
-import "regenerator-runtime/runtime";
 
-function* exampleSaga() {
-  console.log("Example saga reached");
-}
+import rootReducer from "./reducers/index";
 
-const sagaMiddleware = createSagaMiddleware();
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
-export const store = createStore(countReducer, applyMiddleware(sagaMiddleware));
-
-sagaMiddleware.run(exampleSaga);
+export default store;

@@ -11,7 +11,7 @@ import logout from "../../images/logout.svg";
 
 const LeftPanel = () => {
 
-    const [colourIcon, setColourSicon] = useState(false);
+    const [colourIcon, setColourSicon] = useState(true);
 
     const [colourCalender, setColourCalender] = useState(false);
 
@@ -24,6 +24,14 @@ const LeftPanel = () => {
 
     const handleColourSIcon = () => {
         setColourSicon(!colourIcon)
+
+        if (colourIcon === false) {
+            setColourCalender(false);
+            setColourMessage(false);
+            setColourClock(false);
+            setColourSettings(false);
+            setColourLogout(false);
+        }
     }
 
     const handleColourCalender = () => {
