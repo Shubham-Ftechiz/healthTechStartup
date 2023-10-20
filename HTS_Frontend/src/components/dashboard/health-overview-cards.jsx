@@ -26,8 +26,6 @@ const HealthOverviewCards = () => {
   const healthMetricsState = useSelector((state) => state.changeHealthMetrics);
   const barGraphData = useSelector((state) => state.changeBarData);
 
-  console.log("barGraphData:",barGraphData)
-
   useEffect(() => {
     // Health Cards
     fetch(healthmetricsAPI)
@@ -46,7 +44,7 @@ const HealthOverviewCards = () => {
       .catch(error => console.error(error));
   }, []);
 
-const onChangeDate = (value, dateString) => {
+  const onChangeDate = (value, dateString) => {
     console.log('Selected Time: ', value);
   };
 
