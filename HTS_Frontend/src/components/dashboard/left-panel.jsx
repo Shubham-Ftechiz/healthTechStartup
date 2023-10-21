@@ -29,6 +29,13 @@ const LeftPanel = () => {
 
   const handleColourSIcon = () => {
     setColourSicon(!colourIcon);
+    if(colourIcon === false){
+        setColourCalender(false);
+        setColourMessage(false);
+        setColourClock(false);
+        setColourSettings(false);
+        setColourLogout(false);
+    }
   };
 
   const handleColourCalender = () => {

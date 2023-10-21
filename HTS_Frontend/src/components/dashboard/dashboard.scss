@@ -563,7 +563,9 @@
 @media (max-width: 1345px) {
     .bmicalculatorMain {
         margin: 2rem 2.5rem 0 2rem;
+        border-radius: 40px 40px 40px 40px !important;
     }
+
 }
 
 /* Hide subIcon for screens with max-width: 996px */
@@ -615,6 +617,10 @@
               }
             }
         }
+
+        .mainDashboard .bmicalculatorMain {
+            border-radius: 40px 40px 40px 40px;
+        }
     
         // Health Overview Cards
     
@@ -652,5 +658,12 @@
 
     .mainDashboard .bmicalculatorMain .bodyMeasurementMain .bodyMeasurements .cardsManage .bodyParts {
         padding: 20px 25px 25px 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mainDashboard .bmicalculatorMain {
+        padding: 40px 201px 40px 201px !important;
+        height: auto;
     }
 }
