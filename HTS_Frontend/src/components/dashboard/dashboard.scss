@@ -1,174 +1,207 @@
-.mainDashboard{
+.mainDashboard {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    //height: calc(100vh - 1px);
+    flex-wrap: wrap;
+    position: relative;
+    z-index:1;
 
     // Left panel
-    .options{
+    .options {
         border: 1px solid #FFFFFF;
-        width: 10vh;
+        width: auto;
         border-radius: 40px 10px 10px 40px;
         background-color: #FFFFFF;
-        padding-left: 35px;
-        padding-top: 40px;
+        padding: .8rem 2rem;
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+       
 
-        #iconStandard{
+
+        #iconStandard {
             padding-left: 0px;
         }
 
-        #iconSicon{
+        #iconSicon {
             margin-top: 50px;
-            padding-left: 0px;
-            margin-bottom: -25px;
 
-            .selecticonSIcon{
+            .selecticonSIcon {
+
+                padding: 14px 9px 6px 9px;
+                border-radius: 4px;
+                border: 1px solid #303030;
+                background-color: #303030;
                 cursor: pointer;
-                /* border: 1px solid #303030; */
+                cursor: pointer;
+
+                img {
+                    background-color: white;
+                    // border: 1px solid white;
+                    border-radius: 5px;
+                }
             }
-            .selecticonSIconNoBorder{
+
+            .selecticonSIconNoBorder {
                 cursor: pointer;
             }
-            
+
         }
-        
-        .subIcon{
-            margin-top: 40px;
+
+        .subIcon {
+            // margin-top: 40px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            line-height: 4;
+            align-items: center;
+            gap: 3rem;
             /* padding-left: 6px; */
 
-            #iconCalender{
-                .selecticonCalender{
+            #iconCalender {
+                .selecticonCalender {
 
-                    padding: 12px 9px 6px 8px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
-                    border-radius: 10px;
                     background-color: #303030;
                     cursor: pointer;
-                    img{
+                    cursor: pointer;
+
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
 
-                .selecticonCalenderNoBorder{
-
-                    padding: 12px 10px 6px 9px;
+                .selecticonCalenderNoBorder {
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
+
                     /* border: 1px solid #303030; */
                     //border-radius: 10px;
-                    img{
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
             }
-            #iconMessage{
-                .selecticonIconMessage{
-                   
-                    padding: 12px 9px 6px 8px;
+
+            #iconMessage {
+                .selecticonIconMessage {
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
-                    border-radius: 10px;
                     cursor: pointer;
-                    img{
+
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
 
-                .selecticonIconMessageNoBorder{
-                   
-                    padding: 12px 10px 6px 9px;
+                .selecticonIconMessageNoBorder {
+
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
+
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
-                    img{
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
             }
-            #iconClock{
-                .selecticonIconClock{
-                   
-                    padding: 12px 9px 6px 8px;
+
+            #iconClock {
+                .selecticonIconClock {
+
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
-                    border-radius: 10px;
                     cursor: pointer;
-                    img{
+
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
-                .selecticonIconClockNoBorder{
-                   
-                    padding: 12px 10px 6px 9px;
+
+                .selecticonIconClockNoBorder {
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
+
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
-                    img{
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
             }
-            #iconSettings{
-                .selecticonIconSettings{
-                   
-                    padding: 12px 9px 6px 8px;
+
+            #iconSettings {
+                .selecticonIconSettings {
+
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
-                    border-radius: 10px;
                     cursor: pointer;
-                    img{
+
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
-                .selecticonIconSettingsNoBorder{
-                   
-                    padding: 12px 10px 6px 9px;
+
+                .selecticonIconSettingsNoBorder {
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     cursor: pointer;
+
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
-                    img{
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
             }
-            #iconLogout{
-                .selecticonIconLogout{
-                    padding: 12px 9px 6px 8px;
+
+            #iconLogout {
+                .selecticonIconLogout {
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
                     border: 1px solid #303030;
-                    border-radius: 10px;
                     cursor: pointer;
                     background-color: #303030;
-                    img{
+
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
                     }
                 }
-                .selecticonIconLogoutNoBorder{
+
+                .selecticonIconLogoutNoBorder {
                     cursor: pointer;
-                    padding: 12px 10px 6px 9px;
+                    padding: 13px 9px 6px 9px;
+                    border-radius: 4px;
+
                     /* border: 1px solid #303030; */
-                    border-radius: 10px;
-                    img{
+                    img {
                         background-color: white;
                         border: 1px solid white;
                         border-radius: 5px;
@@ -180,39 +213,44 @@
 
     // Health Overview Cards
 
-    .healthOverviewMain{
+    .healthOverviewMain {
         flex: 2;
         display: flex;
         flex-direction: column;
         padding: 30px;
+        margin-right: 1rem;
 
-        .subhealthOverview{
+
+        .subhealthOverview {
             flex: 1;
 
-            .healthOverviewtop{
+            .healthOverviewtop {
                 display: flex;
                 flex-direction: row;
 
-                .healthHeading{
+                .healthHeading {
                     font-size: 28px;
                     font-weight: 700;
                     line-height: 35.14px;
                 }
-                .serachbellIcon{
+
+                .serachbellIcon {
                     flex: 1;
                 }
             }
-            .dateCards{
+
+            .dateCards {
                 margin-top: 15px;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 20.08px;
             }
+
             .mainCards {
                 display: flex;
                 justify-content: space-between;
 
-                .cards{
+                .cards {
                     width: 213px;
                     height: 262px;
                     margin-top: 20px;
@@ -224,30 +262,32 @@
                     flex-direction: column;
                     justify-content: space-between;
 
-                    .topIcon{
+                    .topIcon {
                         display: flex;
                         //justify-content: space-between;
                     }
 
-                    .iconBackground{
+                    .iconBackground {
                         width: 29px;
                         padding: 10px;
                         border: 1px solid transparent;
                         border-radius: 12px;
                     }
-                    .testName{
+
+                    .testName {
                         font-size: 16px;
                         font-weight: 600;
                         padding: 20px;
                     }
-                    .measureName{
+
+                    .measureName {
                         font-size: 20px;
                         font-weight: 600;
                     }
-                    .measureUnit{
 
-                    }
-                    .testResult{
+                    .measureUnit {}
+
+                    .testResult {
                         font-size: 12px;
                         font-weight: 600;
                         width: 40px;
@@ -256,11 +296,11 @@
                         border-radius: 5px;
                     }
                 }
-                
+
             }
         }
 
-        .activityGrowth{
+        .activityGrowth {
             flex: 1;
             width: auto;
             height: auto;
@@ -270,21 +310,24 @@
             border-radius: 10px;
             padding: 20px;
 
-            .activityGrowthTxt{
+            .activityGrowthTxt {
                 font-size: 20px;
                 font-weight: 700;
             }
-            .datePicker{
+
+            .datePicker {
                 float: right;
             }
-            .graph-chart{
+
+            .graph-chart {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-top: 10px;
             }
         }
-        .appointments{
+
+        .appointments {
             flex: 1;
             margin-top: 20px;
             width: auto;
@@ -298,12 +341,12 @@
             display: flex;
             justify-content: space-between;
 
-            .upcomingAppointment{
+            .upcomingAppointment {
                 font-size: 20px;
                 font-weight: 600;
             }
 
-            .appointmentDate{
+            .appointmentDate {
                 font-size: 12px;
                 font-weight: 700;
                 border: 1px solid transparent;
@@ -311,15 +354,17 @@
                 border-radius: 8px;
                 padding: 7px;
             }
-            .appointmentName{
-                font-size:16px;
+
+            .appointmentName {
+                font-size: 16px;
                 font-weight: 400;
             }
         }
     }
 
     // BMI Calculator
-    .bmicalculatorMain{
+    .bmicalculatorMain {
+        width: 100%;
         flex: 1;
         border: 1px solid #303030;
         border-radius: 40px 10px 10px 40px;
@@ -331,19 +376,19 @@
             display: flex;
             justify-content: space-between;
 
-            .mainHeading{
+            .mainHeading {
                 font-size: 22px;
                 font-weight: 400;
                 color: #FFFFFF;
             }
         }
 
-        .heightWeightPicker{
+        .heightWeightPicker {
             display: flex;
             margin-top: 20px;
             justify-content: space-between;
 
-            .sidePickerMain{
+            .sidePickerMain {
 
                 height: 105px;
                 width: 200px;
@@ -352,21 +397,23 @@
                 background-color: #4A4949;
                 padding: 10px;
 
-                .sidePickerIcon{
+                .sidePickerIcon {
 
-                    .sidePickerBmi{
+                    .sidePickerBmi {
                         font-size: 16px;
                         color: #FFFFFF;
                     }
 
-                    .BMIHealth{
+                    .BMIHealth {
                         display: flex;
                         justify-content: space-between;
                         margin-top: 20px;
-                        .BMIValue{
+
+                        .BMIValue {
                             color: #FFFFFF;
                         }
-                        .healthyIcon{
+
+                        .healthyIcon {
                             border: 1px solid #D6FFDD;
                             border-radius: 5px;
                             background-color: #D6FFDD;
@@ -376,34 +423,38 @@
                             padding: 2px;
                         }
                     }
-                    .slider-picker{
+
+                    .slider-picker {
                         display: flex;
                         justify-content: center;
                     }
-                    .slider-picker> div:nth-child(1) {
+
+                    .slider-picker>div:nth-child(1) {
                         width: 90%;
                         border: 1px solid rgb(79, 9, 9);
                         border-radius: 10px;
                     }
-                    .slider-picker> div:nth-child(2) {
+
+                    .slider-picker>div:nth-child(2) {
                         visibility: hidden;
                     }
-                    .slider-picker> div > div > div {
-                            border-radius: 10px;
+
+                    .slider-picker>div>div>div {
+                        border-radius: 10px;
                     }
 
-                    .sliderMain{
+                    .sliderMain {
                         margin-top: 20px;
-                       
+
                     }
                 }
             }
         }
-        
-        .bodyMeasurementMain{
+
+        .bodyMeasurementMain {
             display: flex;
-            
-            .bodyMeasurements{
+
+            .bodyMeasurements {
                 color: #FFFFFF;
                 flex: 2;
                 display: flex;
@@ -419,15 +470,17 @@
                     align-items: flex-start;
                 }
 
-                #bodyMeasurementHeading{
+                #bodyMeasurementHeading {
                     font-size: 16px;
                 }
-                #checkStatus{
+
+                #checkStatus {
                     font-size: 12px;
                     color: #CACACA;
 
                 }
-                #bodyShape{
+
+                #bodyShape {
                     font-size: 12px;
                     color: #FFFFFF;
                     background-color: #4A4949;
@@ -438,9 +491,11 @@
                     /* height: 15vh; */
                     text-align: center;
                 }
-                .cardsManage{
+
+                .cardsManage {
                     margin-top: 20%;
-                    .bodyParts{
+
+                    .bodyParts {
                         height: auto;
                         width: 5vw;
                         padding: 10px 10px 15px 10px;
@@ -448,32 +503,167 @@
                         border-radius: 5px;
                         background-color: #FFFFFF;
                         margin-top: 10px;
-    
-                        .subBodyPart{
+
+                        .subBodyPart {
                             font-size: 12px;
                             color: #5F5F5F;
                             font-weight: bold;
                             text-align: center;
                             padding-bottom: 1rem;
                         }
-                        .partSizeIcon{
+
+                        .partSizeIcon {
                             display: flex;
                             justify-content: space-evenly;
                             margin-top: -10px;
-                            #partValue{
+
+                            #partValue {
                                 font-size: 16px;
                                 color: #5F5F5F;
                             }
-                            #partImg{
-    
-                            }
+
+                            #partImg {}
                         }
                     }
                 }
             }
-            .bodyMeasurementsImg{
+
+            .bodyMeasurementsImg {
                 flex: 1;
             }
         }
+    }
+}
+
+.hamburgerIcon {
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.hamburger-bar {
+    width: 30px;
+    height: 3px;
+    background-color: grey;
+    margin: 4px 0;
+    color: #ffa41f;
+    display: none;
+}
+
+.subIcon {
+    display: none;
+}
+
+/* Display subIcon when showMenu is true */
+.subIcon.show-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 1345px) {
+    .bmicalculatorMain {
+        margin: 2rem 2.5rem 0 2rem;
+        border-radius: 40px 40px 40px 40px !important;
+    }
+
+}
+
+/* Hide subIcon for screens with max-width: 996px */
+@media (max-width: 996px) {
+    .hamburger-bar {
+        display: block;
+    }
+
+    .subIcon.show-menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .mainDashboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        z-index:1;
+    
+        // Left panel
+        .options {
+            border: 1px solid #FFFFFF;
+            width: auto;
+            border-radius: 40px 10px 10px 40px;
+            background-color: #FFFFFF;
+            padding: .8rem 2rem;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            
+            #iconSicon {
+                margin-top: 0px;
+            }
+    
+          #iconStandard{
+            margin-right:1.5rem ;
+          }
+          
+    
+            .subIcon {
+                // margin-top: 10rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+              }
+            }
+        }
+
+        .mainDashboard .bmicalculatorMain {
+            border-radius: 40px 40px 40px 40px;
+        }
+    
+        // Health Overview Cards
+    
+       
+        // BMI Calculator
+       
+    }
+    
+    // .bmicalculatorMain{
+    //     margin: 2rem 2.5rem 0 2rem;
+     
+    // }
+
+@media (max-width: 425px) {
+    .mainDashboard .bmicalculatorMain {
+        flex: 1 1;
+        border: 1px solid #303030;
+        border-radius: 40px 40px 40px 40px;
+        background-color: #303030;
+        padding: 40px 175px 40px 175px !important;
+        height: auto;
+    }
+
+    .subBodyPart{
+        font-size: 10px !important;
+    }
+    .mainDashboard .bmicalculatorMain .bodyMeasurementMain .bodyMeasurements .cardsManage .bodyParts .partSizeIcon #partValue {
+        font-size: 12px;
+        color: #5F5F5F;
+    }
+
+    div#partImg > img {
+        width: 12px !important;
+    }
+
+    .mainDashboard .bmicalculatorMain .bodyMeasurementMain .bodyMeasurements .cardsManage .bodyParts {
+        padding: 20px 25px 25px 25px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mainDashboard .bmicalculatorMain {
+        padding: 40px 201px 40px 201px !important;
+        height: auto;
     }
 }

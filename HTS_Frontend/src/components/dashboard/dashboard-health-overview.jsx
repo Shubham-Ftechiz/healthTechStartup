@@ -7,15 +7,19 @@ import HealthOverviewCards from "./health-overview-cards";
 import BMICalculator from "./bmi-calculator";
 
 const Dashboard = () => {
-    return (
-        <div className="mainDashboard">
-                <LeftPanel/>
+  return (
+    <div className="mainDashboard">
 
-                <HealthOverviewCards/>
-                
-                <BMICalculator/>
-        </div>
-    )
-}
+   
+        <LeftPanel />
+
+        <HealthOverviewCards />
+      
+     
+        <BMICalculator />
+      
+    </div>
+  );
+};
 
 export default Dashboard;

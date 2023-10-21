@@ -95,7 +95,7 @@ return(
             <div className="subActivityGrowth">
                 <span className="activityGrowthTxt"> Activity Growth </span> 
                 <span className="datePicker">
-                    <DatePicker showTime onChange={onChangeDate} onOk={onOk} />
+                    <DatePicker showTime onChange={onChangeDate} onOk={onOk} placement={"topLeft"}/>
                 </span>
             </div>
             <div className="graph-chart">
