@@ -11,9 +11,6 @@ import { DatePicker, Space } from 'antd';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid ,
 Legend} from "recharts";
 
-
-
-
 const HealthOverviewCards = () => {
 
   const [healthMetrics, setHealthMetrics] = useState();
