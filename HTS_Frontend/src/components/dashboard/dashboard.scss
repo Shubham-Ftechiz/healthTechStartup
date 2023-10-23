@@ -26,8 +26,7 @@
             margin-top: 50px;
 
             .selecticonSIcon{
-
-                    padding: 14px 9px 6px 9px;
+                    padding: 13px 10px 6px 10px;
                     border-radius: 4px;
                     border: 1px solid #303030;
                     background-color: #303030;
@@ -530,27 +529,177 @@
         display: flex;
         flex-direction: column;
     }
-    // .mainDashboard{
-    //     display: flex;
-    //     flex-wrap: wrap;
-    // }
-    // .options{
-       
-    //     height:auto;
-    //     z-index:2;
-    // }
-    // .healthOverviewMain{
-    //     position: absolute;
-    //     top:0;
-    //     left:3rem;
-    //     margin-right: 2rem;
-    //     z-index:1;
-    // }
-    
-    // .bmicalculatorMain{
-    //     margin: 2rem 2.5rem 0 2rem;
-     
-    // }
+    .alignDrawer > div > .ant-drawer-body {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .alignDrawer > div > .ant-drawer-body > #iconSicon {
+                .selecticonSIcon{
+                    padding: 13px 10px 6px 10px;
+                    border-radius: 4px;
+                    border: 1px solid #303030;
+                    background-color: #303030;
+                    cursor: pointer;
+                    cursor: pointer;
+                    img{
+                        background-color: white;
+                        // border: 1px solid white;
+                        border-radius: 5px;
+                    }
+                }
+                .selecticonSIconNoBorder{
+                    cursor: pointer;
+                }
+    }
+
+    .alignDrawer > div > .ant-drawer-body > #iconCalender {
+        .selecticonCalender{
+
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            border: 1px solid #303030;
+            background-color: #303030;
+            cursor: pointer;
+            cursor: pointer;
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+
+        .selecticonCalenderNoBorder{
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+        .mainDashboard {
+            .optionsDrawer{
+                border: 0px;
+                width: auto;
+                border-radius: 0px;
+                padding: 0px;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .alignDrawer > div > .ant-drawer-body > #iconMessage {
+        .selecticonIconMessage{
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            border: 1px solid #303030;
+            background-color: #303030;
+            cursor: pointer;
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+
+        .selecticonIconMessageNoBorder{
+        
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            /* border: 1px solid #303030; */
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .alignDrawer > div > .ant-drawer-body > #iconClock {
+        .selecticonIconClock{
+                    
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            border: 1px solid #303030;
+            background-color: #303030;
+            cursor: pointer;
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+        .selecticonIconClockNoBorder{
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            cursor: pointer;
+            /* border: 1px solid #303030; */
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .alignDrawer > div > .ant-drawer-body > #iconSettings {
+    .selecticonIconSettings{
+                   
+        padding: 13px 9px 6px 9px;
+        border-radius: 4px;
+        border: 1px solid #303030;
+        background-color: #303030;
+        cursor: pointer;
+        img{
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+    }
+    .selecticonIconSettingsNoBorder{
+        padding: 13px 9px 6px 9px;
+        border-radius: 4px;
+        cursor: pointer;
+        /* border: 1px solid #303030; */
+        img{
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+    }
+    }
+    .alignDrawer > div > .ant-drawer-body > #iconLogout {
+        .selecticonIconLogout{
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            border: 1px solid #303030;
+            cursor: pointer;
+            background-color: #303030;
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+        .selecticonIconLogoutNoBorder{
+            cursor: pointer;
+            padding: 13px 9px 6px 9px;
+            border-radius: 4px;
+            /* border: 1px solid #303030; */
+            img{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+        }
+    }
+    .optionsDrawer > div > #hideIconStandard{
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 425px) {
