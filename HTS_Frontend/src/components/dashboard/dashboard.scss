@@ -365,6 +365,7 @@
                 border-radius: 5px;
                 background-color: #4A4949;
                 padding: 10px;
+                margin-left: 4px;
 
                 .sidePickerIcon{
 
@@ -587,6 +588,7 @@
                 border-radius: 0px;
                 padding: 0px;
                 padding-top: 10px;
+                cursor: pointer;
             }
         }
     }
@@ -696,6 +698,9 @@
                 border-radius: 5px;
             }
         }
+    }
+    .optionsDrawer {
+        cursor: pointer;
     }
     .optionsDrawer > div > #hideIconStandard{
         visibility: hidden;
