@@ -24,13 +24,8 @@ const LeftPanel = () => {
   const [showMenu, setShowMenu] = useState(window.innerWidth > 996);
   const [open, setOpen] = useState(false);
 
-  /* const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  }; */
-
   const showDrawer = () => {
     setOpen(true);
-    //setShowMenu(!showMenu);
   };
   const onClose = () => {
     setOpen(false);
@@ -114,7 +109,7 @@ const LeftPanel = () => {
   }, []);
   return (
     <div className={showMenu ? "options" : "optionsDrawer"}>
-      <div id="hamburgerIcon" /* onClick={toggleMenu} */ onClick={showDrawer} style={{margin:"1rem"}}>
+      <div id="hamburgerIcon" onClick={showDrawer} style={{margin:"1rem"}}>
         <div className="hamburger-bar" />
         <div className="hamburger-bar" />
         <div className="hamburger-bar" />
