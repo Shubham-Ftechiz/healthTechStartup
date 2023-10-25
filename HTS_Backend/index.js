@@ -33,7 +33,9 @@ app.get("/", (req, res) => {
 // routes
 dashbord(app);
 
+const PORT = process.env.PORT | 8000;
+
 // starting the server
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log("listening on port 8000");
 });
